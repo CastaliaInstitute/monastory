@@ -66,6 +66,32 @@ body {
     font-weight: 300;
     color: var(--color-text);
     font-style: italic;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-epigraph {
+    font-size: 1rem;
+    font-style: italic;
+    color: #666;
+    max-width: 600px;
+    margin: var(--spacing-md) auto 0;
+    line-height: 1.6;
+}
+
+.hero-epigraph cite {
+    display: block;
+    margin-top: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.hero-symbol {
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-image {
+    width: 120px;
+    height: 120px;
+    opacity: 0.8;
 }
 
 /* Content Sections */
@@ -115,6 +141,16 @@ p {
     color: var(--color-text);
     text-align: center;
     font-style: italic;
+    margin-bottom: var(--spacing-md);
+}
+
+.intro-detail {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* Intro Section */
@@ -276,5 +312,147 @@ footer a:hover {
     .btn {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+/* Philosophy Section Enhancements */
+.philosophy-image-container,
+.method-image-container {
+    text-align: center;
+    margin: var(--spacing-md) 0;
+}
+
+.section-image {
+    width: 150px;
+    height: 150px;
+    opacity: 0.7;
+}
+
+.philosophy-principles {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--color-bg);
+    border-radius: 8px;
+}
+
+.philosophy-principles h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-accent);
+}
+
+.principles-list {
+    list-style: none;
+    counter-reset: principle-counter;
+    padding: 0;
+}
+
+.principles-list li {
+    counter-increment: principle-counter;
+    margin-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    position: relative;
+    line-height: 1.8;
+}
+
+.principles-list li::before {
+    content: counter(principle-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.principles-list strong {
+    color: var(--color-accent);
+}
+
+/* Methodology Section */
+.methodology {
+    background-color: var(--color-bg);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+}
+
+.method-intro {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: #555;
+}
+
+.method-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.method-step {
+    background-color: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 3px solid var(--color-accent);
+}
+
+.method-step h4 {
+    color: var(--color-accent);
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 400;
+}
+
+.method-step p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.method-quote {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    border-left: 4px solid var(--color-accent);
+    background-color: var(--color-white);
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.method-quote cite {
+    display: block;
+    margin-top: var(--spacing-sm);
+    font-style: normal;
+    color: var(--color-accent);
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .section-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .method-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-epigraph {
+        font-size: 0.9rem;
     }
 }
