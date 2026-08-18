@@ -30,10 +30,10 @@ Simply open `index.html` in your browser to view the site locally.
 
 ### AWS Route 53 Configuration
 
-To set up the subdomain `monastory.inquiry.institute`:
+To set up the subdomain `monastory.castalia.institute`:
 
 1. Log into AWS Console and navigate to Route 53
-2. Select the hosted zone for `inquiry.institute`
+2. Select the hosted zone for `castalia.institute`
 3. Create a new record:
    - Record name: `monastory`
    - Record type: `CNAME`
@@ -44,7 +44,7 @@ To set up the subdomain `monastory.inquiry.institute`:
 ### Custom Domain on GitHub Pages
 
 1. In your GitHub repository, go to Settings → Pages
-2. Under "Custom domain", enter: `monastory.inquiry.institute`
+2. Under "Custom domain", enter: `monastory.castalia.institute`
 3. Wait for DNS check to complete
 4. Enable "Enforce HTTPS" once DNS is verified
 
